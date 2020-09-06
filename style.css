@@ -1,0 +1,142 @@
+body {
+    background-color: #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.header {
+    font-size: 52px;
+}
+
+.main {
+    background-color: white;
+}
+
+.main__header {
+    padding: 20px;
+    font-size: 32px;
+    margin: 0;
+}
+
+
+/* form styling */
+
+.main__form {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main__input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 20px;
+    height: auto;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    border-radius: none;
+}
+
+.main__button {
+    letter-spacing: 0.6px;
+    padding: 15px 25px;
+    font-size: 22px;
+    border: none;
+    background-color: teal;
+    color: white;
+}
+
+
+/* task list styling */
+
+.tasks {
+    margin-top: 30px;
+    background-color: white;
+}
+
+.tasks__header {
+    padding: 20px;
+    font-size: 32px;
+    margin: 0;
+}
+
+.tasks__list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+
+/*  task styling */
+
+.tasks__task {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.tasks__doneButton {
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    color: green;
+    background-color: green;
+    text-decoration: none;
+}
+
+.tasks__content {
+    font-size: 18px;
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+.tasks__deleteButton {
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    color: white;
+    background-color: crimson;
+    text-decoration: none;
+}
+
+
+/* done task styling */
+
+.task--done .tasks__content {
+    text-decoration: line-through;
+}
+
+.task--done .tasks__doneButton {
+    color: white;
+}
+
+
+/* media queries for phones */
+
+@media(max-width:700px) {
+    .main__form {
+        flex-direction: column;
+    }
+    .main__input {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .main__button {
+        flex-grow: 1;
+    }
+}
