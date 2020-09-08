@@ -10,25 +10,46 @@ hr {
     padding: 0;
 }
 
-.wrapper {
-    width: 1200px;
+.main {
+    width: 1000px;
     max-width: 90vw;
     margin: 0 auto;
-    margin-top: 200px;
 }
 
 .header {
     font-size: 52px;
 }
 
-.main {
-    background-color: white;
-}
-
 .main__header {
     padding: 20px;
     font-size: 32px;
     margin: 0;
+}
+
+.main__group {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.main__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__buttons {
+    padding: 20px;
+}
+
+.main__functionButton {
+    color: teal;
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+.main__functionButton:disabled {
+    color: #ccc
 }
 
 
@@ -59,21 +80,7 @@ hr {
     color: white;
 }
 
-
-/* task list styling */
-
-.tasks {
-    margin-top: 30px;
-    background-color: white;
-}
-
-.tasks__header {
-    padding: 20px;
-    font-size: 32px;
-    margin: 0;
-}
-
-.tasks__list {
+.main__list {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -84,13 +91,15 @@ hr {
 
 /*  task styling */
 
-.tasks__task {
+.task {
     display: flex;
     align-items: center;
     margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc
 }
 
-.tasks__doneButton {
+.task__doneButton {
     font-size: 18px;
     padding: 15px;
     border: none;
@@ -99,13 +108,13 @@ hr {
     text-decoration: none;
 }
 
-.tasks__content {
+.task__content {
     font-size: 18px;
     margin: 0 20px;
     flex-grow: 1;
 }
 
-.tasks__deleteButton {
+.task__deleteButton {
     font-size: 18px;
     padding: 15px;
     border: none;
@@ -117,18 +126,26 @@ hr {
 
 /* done task styling */
 
-.task--done .tasks__content {
+.task--done .task__content {
     text-decoration: line-through;
 }
 
-.task--done .tasks__doneButton {
+.task--done .task__doneButton {
     color: white;
+}
+
+.js--hidden {
+    display: none;
 }
 
 
 /* media queries for phones */
 
 @media(max-width:700px) {
+    .main__wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
     .main__form {
         flex-direction: column;
     }

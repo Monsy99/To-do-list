@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en/PL">
 
 <head>
     <meta charset="UTF-8">
@@ -11,24 +11,28 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <main class="main">
         <h1 class="header">Lista zadań</h1>
-        <main class="main">
+        <div class="main__group">
             <h2 class="main__header">Dodaj nowe zadanie</h2>
             <hr>
             <form class="main__form js-form">
                 <input autofocus required class="main__input js-taskContent" type="text" placeholder="Co jest do zrobienia?">
                 <button class="main__button js-newTaskButton">Dodaj zadanie</button>
             </form>
-        </main>
-        <aside class="tasks">
-            <h2 class="tasks__header">Lista zadań</h2>
+        </div>
+
+        <div class="main__group">
+            <div class="main__wrapper">
+                <h2 class="main__header">Lista zadań</h2>
+                <div class="main__buttons"></div>
+            </div>
             <hr>
-            <ul class="tasks__list js-tasksContainer">
+            <ul class="main__list js-tasksContainer">
                 Only pros look down here ;)
             </ul>
-        </aside>
-    </div>
+        </div>
+    </main>
 </body>
 
 </html>
