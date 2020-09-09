@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
     <script defer src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form1.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="tasks.css">
     <title>Lista zadań</title>
 </head>
 
 <body>
     <main class="main">
-        <h1 class="header">Lista zadań</h1>
+        <h1 class="main__header">Lista zadań</h1>
         <div class="main__group">
-            <h2 class="main__header">Dodaj nowe zadanie</h2>
+            <h2 class="main__subHeader">Dodaj nowe zadanie</h2>
             <hr>
-            <form class="main__form js-form">
-                <input autofocus required class="main__input js-taskContent" type="text" placeholder="Co jest do zrobienia?">
-                <button class="main__button js-newTaskButton">Dodaj zadanie</button>
+            <form class="form js-form">
+                <input autofocus class="form__input js-taskContent" type="text" placeholder="Co jest do zrobienia?">
+                <button class="form__newTaskButton js-newTaskButton">Dodaj zadanie</button>
             </form>
         </div>
 
         <div class="main__group">
             <div class="main__wrapper">
-                <h2 class="main__header">Lista zadań</h2>
+                <h2 class="main__subHeader">Lista zadań</h2>
                 <div class="main__buttons"></div>
             </div>
             <hr>
-            <ul class="main__list js-tasksContainer">
+            <ul class="tasks js-tasksContainer">
                 Only pros look down here ;)
             </ul>
         </div>

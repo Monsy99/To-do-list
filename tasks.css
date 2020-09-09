@@ -1,0 +1,68 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc
+}
+
+.task__doneButton {
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    color: green;
+    background-color: green;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.task__doneButton:hover {
+    color: rgb(19, 161, 19);
+    background-color: rgb(19, 161, 19);
+    cursor: pointer;
+}
+
+.task__content {
+    font-size: 18px;
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+.task__deleteButton {
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    color: white;
+    background-color: crimson;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.task__deleteButton:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(148, 17, 43);
+}
+
+
+/* done task styling */
+
+.task--done .task__content {
+    text-decoration: line-through;
+}
+
+.task--done .task__doneButton {
+    color: white;
+}
+
+.js--hidden {
+    display: none;
+}
